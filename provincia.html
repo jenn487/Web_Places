@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhereToGo - Provincia</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header-simple">
+        <div class="container">
+            <a href="index.html" class="logo">WhereToGo</a>
+            <h1 id="provincia-nombre">Cargando...</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="filtros-section">
+            <h2>Filtrar por categoría:</h2>
+            <div class="filtros">
+                <button class="filtro-btn active" data-categoria="">Todos</button>
+                <button class="filtro-btn" data-categoria="restaurante">Restaurantes</button>
+                <button class="filtro-btn" data-categoria="turistico">Sitios Turísticos</button>
+                <button class="filtro-btn" data-categoria="ocio">Ocio</button>
+            </div>
+        </section>
+
+        <section class="lugares-section">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Cargando lugares...</p>
+            </div>
+            
+            <div id="lugares-grid" class="lugares-grid" style="display: none;">
+                <!-- Los lugares -->
+            </div>
+            
+            <div id="no-results" class="no-results" style="display: none;">
+                <h3>No se encontraron lugares</h3>
+                <p>No hay lugares disponibles para esta categoría.</p>
+            </div>
+            
+            <div id="error-message" class="error-message" style="display: none;">
+                <p>Error al cargar los lugares. Por favor, intenta nuevamente.</p>
+                <button onclick="cargarLugares()">Reintentar</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- detalles del lugar -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Contenido del modal -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 WhereToGo - Proyecto Final Programación III</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

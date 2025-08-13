@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhereToGo - Descubre tu próximo destino</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1 class="logo">WhereToGo</h1>
+            <p class="tagline">Descubre los mejores lugares de la República Dominicana</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Explora por Provincia</h2>
+            <p>Encuentra restaurantes, sitios turísticos y opciones de ocio en cada rincón del país.</p>
+        </section>
+
+        <section class="provincias-section">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Cargando provincias...</p>
+            </div>
+            
+            <div id="provincias-grid" class="provincias-grid" style="display: none;">
+                <!-- Las provincias  -->
+            </div>
+            
+            <div id="error-message" class="error-message" style="display: none;">
+                <p>Error al cargar las provincias. Por favor, intenta nuevamente.</p>
+                <button onclick="cargarProvincias()">Reintentar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 WhereToGo by Jennifer - Proyecto Final Programación III</p>
+            <p>Instituto Tecnológico de las Américas (ITLA)</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
