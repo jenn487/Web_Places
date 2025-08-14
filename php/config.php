@@ -3,7 +3,8 @@
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'wheretogo');
 define('DB_USER', 'root');
-define('DB_PASS', ''); 
+define('DB_PASS', '');
+
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');

@@ -90,28 +90,25 @@ async function cargarProvincias() {
 
 function mostrarProvincias(provincias) {
     const grid = document.getElementById('provincias-grid');
-    if (!grid) {
-        console.error('Elemento provincias-grid no encontrado');
-        return;
-    }
+    if (!grid) return;
     
     grid.innerHTML = '';
     
     provincias.forEach(provincia => {
-        const card = document.createElement('a');
-        card.href = `provincia.html?id=${provincia.id}`;
+        const card = document.createElement('div');
         card.className = 'provincia-card';
         card.innerHTML = `
             <h3>${provincia.nombre}</h3>
             <p>${provincia.descripcion}</p>
+            <a href="provincia.html?id=${provincia.id}" class="read-more">Leer más</a>
         `;
         grid.appendChild(card);
     });
     
     ocultarElemento('loading');
     mostrarElemento('provincias-grid');
-    console.log(`Mostrando ${provincias.length} provincias`);
 }
+
 
 function obtenerParametroURL(nombre) {
     const urlParams = new URLSearchParams(window.location.search);
